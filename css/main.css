@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#fff5f5));
+  background: linear-gradient(to bottom, white, #fff5f5);
+}
+
+.header {
+  padding: 1.8em 2em;
+}
+
+.header__logo {
+  width: 6.5em;
+}
+
+.picture__imagen {
+  width: 100%;
+  max-width: 768px;
+  height: auto;
+}
+
+.copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.copy__title {
+  width: 8em;
+  color: #ce9797;
+  font-size: 2.5em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+}
+
+.copy__title--strong {
+  color: #413a3a;
+  font-weight: 600;
+}
+
+.copy__title--strong::before {
+  content: "\A";
+  white-space: pre;
+}
+
+.copy__description {
+  color: #ce9797;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.4em;
+  margin-bottom: 2em;
+  max-width: 22em;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  min-width: 20em;
+}
+
+.form__input-email {
+  width: 100%;
+  background: none;
+  border: 1px solid #ce9797;
+  color: #413a3a;
+  border-radius: 50px;
+  padding: 1.2em 1.6em;
+}
+
+.form__input-email::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+.form__input-email:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.form__input-email::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.form__input-email::placeholder {
+  color: #ce9797;
+}
+
+.button {
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 2em;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  padding: 1em 1.9em;
+  position: absolute;
+  right: 0;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.button:hover {
+  background: #f96262;
+}
+
+.button--active {
+  background-color: linear-gradient(to bottom, white, #fff5f5);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 2em;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #3e52a3;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    max-height: 100vh;
+  }
+  .header {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 7;
+    max-height: 5em;
+    margin-top: 4em;
+    margin-left: 2em;
+    padding: 0;
+  }
+  .header__logo {
+    width: 9em;
+  }
+  .picture {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-grid-column: 13;
+        grid-column-start: 13;
+    grid-column-end: 8;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  .picture__imagen {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top center;
+       object-position: top center;
+  }
+  .copy {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 2em;
+  }
+  .copy__title {
+    text-align: start;
+    margin: 0;
+    font-size: 4em;
+  }
+  .copy__description {
+    text-align: start;
+    max-width: 27em;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+  }
+  .form {
+    width: 100%;
+    max-width: 28em;
+  }
+  .form__input-email {
+    width: 100%;
+  }
+  .button {
+    padding: 1em 2.5em;
+  }
+}
+/*# sourceMappingURL=main.css.map */

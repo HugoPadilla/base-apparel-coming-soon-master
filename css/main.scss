@@ -1,0 +1,202 @@
+$font-family: 'Josefin Sans',
+sans-serif;
+$font-size: 16px;
+
+$primary-desaturated-red: hsl(0, 36%, 70%);
+$primary-soft-red: hsl(0, 93%, 68%);
+
+$neutral-dark-grayish-red: hsl(0, 6%, 24%);
+
+$bg-gradient: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$bg-gradient-btn: linear-gradient(135deg,hsl(0, 80%, 86%) ,  hsl(0, 74%, 74%));
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: $font-family;
+    background: $bg-gradient
+}
+
+// Header
+
+.header {
+    padding: 1.8em 2em;
+}
+
+.header__logo {
+    width: 6.5em;
+}
+
+.picture__imagen {
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+}
+
+.copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copy__title {
+    width: 8em;
+    color: $primary-desaturated-red;
+    font-size: 2.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+
+.copy__title--strong {
+    color: $neutral-dark-grayish-red;
+    font-weight: 600;
+    
+    &::before {
+        content: "\A";
+        white-space: pre;
+    }
+}
+
+.copy__description {
+    color: $primary-desaturated-red;
+    font-size: $font-size;
+    text-align: center;
+    line-height: 1.4em;
+    margin-bottom: 2em;
+    max-width: 22em;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-width:20em;
+}
+
+.form__input-email {
+    width: 100%;
+    background: none;
+    border: 1px solid $primary-desaturated-red;
+    color: $neutral-dark-grayish-red;
+    border-radius: 50px;
+    padding: 1.2em 1.6em;
+
+    &::placeholder {
+        color: $primary-desaturated-red;
+    }
+}
+
+// Button
+.button {
+    cursor: pointer;
+    border-width: 0;
+    border-radius: 2em;
+    background: $bg-gradient-btn;
+    padding: 1em 1.9em;
+    position:absolute;
+    right: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    &:hover {
+        background: $primary-soft-red;
+    }
+}
+
+.button--active {
+    background-color: $bg-gradient;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2em;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        max-height: 100vh;
+    }
+
+    .header {
+        grid-column-start: 2;
+        grid-column-end: 7;
+        max-height: 5em;
+        margin-top: 4em;
+        margin-left: 2em;
+        padding: 0;
+    }
+
+    .header__logo {
+        width: 9em;
+    }
+
+    .picture {
+        display: inline-flex;
+        grid-column-start: 13;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .picture__imagen {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
+    
+    .copy {
+        grid-column-start: 2;
+        grid-column-end: 7;
+        display: flex;
+        align-items: flex-start;
+        margin-left: 2em;
+    }
+
+    .copy__title {
+        text-align: start;
+        margin: 0;
+        font-size: 4em;
+    }
+
+    .copy__description {
+        text-align: start;
+        max-width: 27em;
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 28em;
+    }
+
+    .form__input-email {
+        width: 100%;
+    }
+
+    .button {
+        padding: 1em 2.5em;
+    }
+}
