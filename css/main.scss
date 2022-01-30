@@ -8,7 +8,7 @@ $primary-soft-red: hsl(0, 93%, 68%);
 $neutral-dark-grayish-red: hsl(0, 6%, 24%);
 
 $bg-gradient: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-$bg-gradient-btn: linear-gradient(135deg,hsl(0, 80%, 86%) ,  hsl(0, 74%, 74%));
+$bg-gradient-btn: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
 * {
     padding: 0;
@@ -59,7 +59,7 @@ body {
 .copy__title--strong {
     color: $neutral-dark-grayish-red;
     font-weight: 600;
-    
+
     &::before {
         content: "\A";
         white-space: pre;
@@ -77,12 +77,26 @@ body {
 
 .form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     position: relative;
-    min-width:20em;
+    min-width: 20em;
+
+    &::after {
+        content: attr(data-error);
+        font-size: .85em;
+        color: $primary-soft-red;
+        display: block;
+        margin: .5em 1em 0;
+    }
+}
+
+.form[data-error] .form__input-email {
+    outline: none;
+    border: 2px solid $primary-soft-red;
 }
 
 .form__input-email {
+    display: block;
     width: 100%;
     background: none;
     border: 1px solid $primary-desaturated-red;
@@ -102,7 +116,7 @@ body {
     border-radius: 2em;
     background: $bg-gradient-btn;
     padding: 1em 1.9em;
-    position:absolute;
+    position: absolute;
     right: 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
@@ -165,7 +179,7 @@ body {
         object-fit: cover;
         object-position: top center;
     }
-    
+
     .copy {
         grid-column-start: 2;
         grid-column-end: 7;
