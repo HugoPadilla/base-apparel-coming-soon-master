@@ -80,6 +80,7 @@ body {
           flex-direction: column;
   position: relative;
   min-width: 20em;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .form::after {
@@ -156,6 +157,12 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   main {
     display: -ms-grid;
     display: grid;
